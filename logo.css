@@ -1,0 +1,26 @@
+.logo {
+  width: max-content;
+  height: max-content;
+  position: fixed;
+  top: 3vmin;
+  left: 3vmin;
+}
+
+.logo img {
+  width: 20vmin;
+  height: auto;
+}
+
+@media (max-width: 320px) {
+  .logo {
+    width: max-content;
+    height: max-content;
+    position: fixed;
+    top: 1vmin;
+    left: 1vmin;
+  }
+
+  .logo img {
+    width: 10vmin;
+  }
+}

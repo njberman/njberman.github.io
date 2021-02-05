@@ -1,1 +1,3 @@
 .eslintignore
+.prettierrc
+blog
