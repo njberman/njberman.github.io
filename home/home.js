@@ -12,7 +12,7 @@ const GRID_SIZE = 25;
  *    deletes `^b` from string
  */
 
-let TEXT = 'n^bjbermga^bn';
+let TEXT = 'njbce^brmga^bn';
 
 document.addEventListener('DOMContentLoaded', () => {
   const animations = document.getElementById('animations');
@@ -20,22 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
   animations.style.gridTemplateColumns = `repeat(${GRID_SIZE}, 1fr)`;
   animations.style.gridTemplateRows = `repeat(${GRID_SIZE}, 1fr)`;
   // animations.innerHTML = '';
-  let animationsArray = Array.from(
-    { length: GRID_SIZE },
-    () => Array.from(
-      { length: GRID_SIZE },
-      () => {
-        const a = document.createElement('div');
-        a.classList.add('animation');
-        animations.appendChild(a);
-        return a;
-      },
-    ),
+  let animationsArray = Array.from({ length: GRID_SIZE }, () =>
+    Array.from({ length: GRID_SIZE }, () => {
+      const a = document.createElement('div');
+      a.classList.add('animation');
+      animations.appendChild(a);
+      return a;
+    })
   );
   let x = 0;
   let y = 0;
   function showAnimation(mode) {
-    console.log(mode);
     if (mode === 'ORDERED') {
       if (x !== 0) {
         animationsArray[y][x - 1].style.animation = 'fade ease 10s';
@@ -44,17 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (y === GRID_SIZE) {
         y = 0;
         animations.innerHTML = '';
-        animationsArray = Array.from(
-          { length: GRID_SIZE },
-          () => Array.from(
-            { length: GRID_SIZE },
-            () => {
-              const a = document.createElement('div');
-              a.classList.add('animation');
-              animations.appendChild(a);
-              return a;
-            },
-          ),
+        animationsArray = Array.from({ length: GRID_SIZE }, () =>
+          Array.from({ length: GRID_SIZE }, () => {
+            const a = document.createElement('div');
+            a.classList.add('animation');
+            animations.appendChild(a);
+            return a;
+          })
         );
       }
       if (x === GRID_SIZE + 1) {
@@ -68,9 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  const textInterval = setInterval(() => {
-    showText();
-  }, SPEED_OF_ANIMATION * 1000);
+  const textInterval = setInterval(showText, SPEED_OF_ANIMATION * 1000);
   setInterval(blink, (SPEED_OF_ANIMATION / 2) * 1000);
 
   let i = 0;
@@ -80,14 +69,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     i += 1;
     if (i === TEXT.length + 1) {
-      TEXT = 'njbce^brmga^bn';
-      clearInterval(textInterval);
-      return i = 0;
+      // clearInterval(textInterval);
+      setTimeout(() => {
+        TEXT = 'njbce^brmga^bn';
+        i = 0;
+      }, 500);
+      return;
     }
     if (TEXT[i] === '^' && TEXT[i + 1] === 'b') {
       TEXT = TEXT.replace('^b', '');
       TEXT = TEXT.replace(TEXT[i - 2], '');
-      return i -= 2;
+      return (i -= 2);
     }
   }
 

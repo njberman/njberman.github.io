@@ -20,7 +20,8 @@ body {
 
 span.title {
   font-size: 2.5rem;
-  font-family: 'Exo 2', sans-serif;
+  /* font-family: 'Exo 2', sans-serif; */
+  font-family: 'JetBrains Mono', monospace;
   /* font-weight: 900; */
   margin: 1.5rem;
   /* word-spacing: 100px; */
