@@ -1,0 +1,7 @@
+body, canvas, h3, button
+{
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  cursor: none;
+}
