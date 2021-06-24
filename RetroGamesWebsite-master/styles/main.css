@@ -1,0 +1,273 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#wrapper {
+    font-family: "open sans", "helvetica", sans-serif, "arial"; /*clean, modern look. Easy to read as website uses small amounts of text, not long paragraphs. Screens have lower resolution than print so looks better on the screen without the detail of fonts such as serif*/
+    background-color: #333;
+}
+section {
+    background-color: #CCC;
+    padding: 0.1%;
+    margin: 0;
+}
+
+
+/*header*/
+header {
+    background-color: #000;
+}
+header img.desktop {
+	display: block;
+    margin: auto;
+	max-width: 100%;
+}
+header img.phone {
+    display: none;
+}
+
+
+/*Page titles*/
+h1{
+	padding: 0px 40px;
+}
+h1.HomeTitle {
+    color: #0066FF;
+}
+h1.EquipmentTitle {
+	color: #00B050;
+}
+h1.GuideTitle {
+	color: #FF00FF;
+}
+h1.OptionalTitle {
+	color: #FFCC00;
+}
+h1.ContactTitle {
+	color: #FF3300;
+}
+
+
+/*general paragraphs*/
+p {
+	padding: 0px 40px;
+}
+
+
+/*general image formatting*/
+/*image to right of page*/
+section img.floatRight {
+	width: 23%;
+	height: auto;
+	float: right;
+	margin: auto;
+	padding: 1%;
+}
+/*image to left of page*/
+section img.floatLeft {
+	width: 23%;
+	height: auto;
+	float: left;
+	margin: auto;
+	padding: 1%;
+}
+/*centers image*/
+section img.centre {
+	display: block;
+	margin: auto;
+	max-width: 100%;
+}
+
+
+/*navigation*/
+nav ul {
+    list-style: none;
+    background-color: #333;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 20%;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    font-family: open-sans, helvatica, arial;
+    font-weight: bold;
+    font-size: 1.4em;
+    width: 17%;
+    display: block;
+    display: inline-block; /*makes navigation horizontial*/
+}
+
+/*gets rid of list format. Makes text white*/
+nav a {
+  text-decoration: none;
+  color: #FFF;
+  padding: 0;
+}
+
+/*makes lighter shade of grey when visited*/
+nav ul li:visited {
+    background-color: #999;
+}
+
+/*changes colours when hovering*/
+nav ul li.home:hover{
+    background-color: #0066FF;
+}
+nav ul li.equipment:hover{
+    background-color: #00B050;
+}
+nav ul li.guide:hover{
+    background-color: #FF00FF;
+}
+nav ul li.optional:hover{
+    background-color: #FFCC00;
+}
+nav ul li.contact:hover{
+    background-color: #FF3300;
+}
+
+
+/*Home page*/
+section img.homePage {
+	display: block;
+	margin: auto;
+	max-width: 100%;
+}
+/*makes image larger on hover*/
+section img.homePage:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
+}
+
+
+/*Equipment page*/
+h3.EquipmentTitle {
+	color: #00B050;
+    padding: 0px 40px;
+}
+
+section img.equipment_image {
+	display: block;
+	max-width: 30%;
+	margin: auto;
+	float: left;
+	padding: 0% 10% 5%;
+}
+section .equipmentInstructions {
+	float: left;
+	padding: 0% 2%;
+	margin: auto;
+}
+
+/*table*/
+/*colour and general formatting*/
+table {
+	width: 80%;
+	margin: auto;
+	background-color: #FFF;
+}
+table tr.tableHeading {
+	color: #FFF;
+	background-color: #000;
+}
+/*spaces table rows equally*/
+table th.table1 { 
+	width:50%;
+}
+table th.table2 {
+	width:50%;
+}
+
+/*spacing for the case assembely guide*/
+.caseDiv {
+	padding: 2% 2% 5%;
+	margin: 0;
+}
+
+
+/*guide page*/
+/*Different amount of padding for each div so text can fit close together without overlapping*/
+section .guideInstructions {
+	padding: 0 2% 12%;
+	margin: 0 auto;
+}
+section .guideInstructions2 {
+	padding: 6% 2% 7%;
+	margin: 0 auto;
+}
+section .guideInstructions3 {
+	padding: 2% 2% 7%;
+	margin: 0 auto;
+}
+
+
+/*optional page*/
+section .optionalInstructions {
+	padding: 0% 2% 10%;
+	margin: 0 auto;
+}
+section .optionalInstructions2 {
+	padding: 5% 2% 9%;
+	margin: 0 auto;
+}
+
+
+/*Contact page*/
+/*input formatting*/
+form input[type=text] {
+	width: 70%;
+	padding: 5px; 
+	border: none;
+    outline: none;
+	font-size: 1em;
+	color: #333;
+}
+/*red border when clicked on*/
+form input[type=text]:focus {
+    border: 3px solid #FF3300;
+}
+
+/*formatting larger text box for comments*/
+form textarea {
+	width: 70%;
+	padding: 5px;
+	border: none;
+    outline: none;
+	font-size: 1.2em;
+	color: #333;
+}
+form textarea:focus {
+    border: 3px solid #FF3300;
+}
+
+/*submit button formatting*/
+form .submit {
+	color: #FFF;
+	background-color: #333;
+	font-size: 1em;
+    border: none;
+    padding: 16px 32px;
+    text-decoration: none;
+}
+/*red when hovering on the submit button*/
+form .submit:hover {
+	background-color: #FF3300;
+}
+
+
+/*footer*/
+footer {
+    background-color: #333;
+    color: #FFF;
+	height: 120px;
+	margin: 0;
+	padding: 0;
+}
+/*formatting footer image*/
+footer img.sonic {
+    float: right;
+	height: 120px;
+}

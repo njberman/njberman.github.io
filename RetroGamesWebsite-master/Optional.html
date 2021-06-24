@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+      <title>OptionalFeatures</title>
+	  <meta charset="utf-8">
+      <link rel="stylesheet" href="styles/master.css" />
+      <meta name="description" content="How to make a retro console from a raspberry pi" />
+      <meta name="keywords" content="add, some, keywords" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="scripts/nav.js"> </script> 
+<!-- Author:        Tilly Davies 17123433
+     Organisation:  Birmingham City University
+     Copyright:     Copyright 2017 -->
+</head>
+    
+    
+<body>
+<div id="wrapper"> 
+
+<header>
+    <img class="desktop" src="graphics/banner_desk.PNG" alt="How to make a RETRO CONSOLE from a raspberry pi banner"/>
+    <img class="phone" src="graphics/banner_phone.PNG" alt="How to make a RETRO CONSOLE from a raspberry pi banner"/>
+</header>
+
+    
+<nav>
+    <!--hamburger menu-->
+    <div onclick="myMenu(this)">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    
+    <script>
+    function myMenu(x) {
+		//changes between 3 lines and X shape
+        x.classList.toggle("change");
+		
+		//shows navigation, didn't hide again
+		//document.getElementById("show").style.display = "block";
+		
+		//switches between showing navigation and not when hamburger menu clicked
+		//edited from W3Schools as their version started by displying the content whereas mine starts with it hidden
+    	var x = document.getElementById("show");
+		if (x.style.display === "block") {
+        	x.style.display = "none";
+    	} else {
+        	x.style.display = "block";
+    }
+    }
+    </script>
+    
+    <!--Navigation bar made in a list-->
+    <ul id="show">
+        <li class="home"> <a href="Index.html">HOME</a></li>
+        <li class="equipment"> <a href="Equipment.html">EQUIPMENT</a></li>
+        <li class="guide"> <a href="Guide.html">GUIDE</a></li>
+        <li class="optional"> <a href="Optional.html">OPTIONAL</a></li>
+        <li class="contact"> <a href="Contact.html">CONTACT</a></li>
+    </ul>
+    
+</nav>    
+
+<section>
+    
+<h1 class="OptionalTitle">OPTIONAL FEATURES</h1> 
+
+<div class="optionalInstructions">
+<p>1.</p>
+<img class="floatRight" src="images/wifi.png" alt="Wifi menu on raspberry pi"/>    
+<p>Once the controller is set up, you can go to settings. No games yet. Here, you can add Wi-Fi by selecting your router and typing the password. A keyboard is needed. This can be used to transfer ROMs. However, I recommend doing the USB memory stick method for beginners or users on an open network.</p>
+</div> 
+ 
+ 
+<div class="optionalInstructions2">
+<p>2.</p>
+<img class="floatLeft" src="images/file_structure.PNG" alt="File structure after putting into raspberry pi"/>
+<img class="floatRight" src="images/pi_USB.png" alt=""/>
+<p>Create a folder called “retropie” on a blank USB. Then put this into the Raspberry Pi. This will create the needed folders. Put the USB back into your computer. Now, click and drag or copy and paste your ROMs into the correct folder for its console. After putting the USB into your raspberry Pi again, they will be on the SD card so there is no need to keep all the ROMs on the USB.</p>
+</div>
+   
+
+</section> 
+    
+    
+<footer> 
+    <img class="sonic" src="graphics/sonic_footer.PNG" alt="sonic footer"/>
+    <p>Copyright &copy; Tilly Davies, Birmingham City University 2017</p>
+</footer>
+    
+    
+</div>
+</body>

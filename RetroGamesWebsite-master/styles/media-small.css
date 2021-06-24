@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url("main.css");
+
+/*heading*/
+/*Stops displaying larger heading image
+and displays the smaller heading image*/
+header img.desktop {
+    display: none;
+}
+header img.phone {
+    display: block;
+    margin: auto;
+	max-width: 100%;
+}
+
+/*general image formatting*/
+/*change formatting so that images are in the centre so can be larger and easier to see on a smaller screen*/
+/*float cleared. width and padding changed so that image is the right size*/
+section img.floatRight {
+	width: 75%;
+	height: auto;
+	clear:both; 
+	margin: auto;
+	padding: 1% 9%;
+}  
+section img.floatLeft {
+	width: 75%;
+	height: auto;
+	clear:both;
+	margin: auto;
+	padding: 1% 9%;
+} 
+
+
+/*navigation*/
+/*makes vertical list*/
+nav ul li {
+	display: block;
+	float: none;
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+
+/*hide navigation until menu clicked*/
+#show {
+	display: none;
+}
+
+
+/*makes hamburger menu*/
+.line1, .line2, .line3 {
+    width: 35px;
+    height: 5px;
+    background-color: #FFF;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* makes hamburger menu to X */
+.change .line1 {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .line2 {
+    opacity: 0;
+}
+.change .line3 {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+
+/*Equipment page*/
+section img.equipment_image {
+	display: block;
+	max-width: 48%;
+	min-width: auto;
+	float: left;
+	padding: 1%;
+}
+
+.caseDiv {
+	padding: 0;
+}
+
+
+
+/*Guide page*/
+section .instructions {
+	padding: 0;
+	margin: auto;
+}
+
+
+/*Contact page*/
+form input[type=text] {
+	width: 100%;
+	padding: 5px; 
+}
+form textarea {
+	width: 100%;
+	padding: 5px;
+}
+
+
+/*footer*/
+/*stops showing the image*/
+footer img.sonic {
+    display: none;
+}
+footer {
+    padding: 2%;
+}
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+      <title>equipment</title>
+	  <meta charset="utf-8">
+      <link rel="stylesheet" href="styles/master.css" />
+      <meta name="description" content="How to make a retro console from a raspberry pi" />
+      <meta name="keywords" content="add, some, keywords" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"><script src="scripts/nav.js"> </script> 
+<!-- Author:        Tilly Davies 17123433
+     Organisation:  Birmingham City University
+     Copyright:     Copyright 2017 -->
+</head>
+    
+    
+<body>
+<div id="wrapper"> 
+
+<header>
+    <img class="desktop" src="graphics/banner_desk.PNG" alt="How to make a RETRO CONSOLE from a raspberry pi banner"/>
+    <img class="phone" src="graphics/banner_phone.PNG" alt="How to make a RETRO CONSOLE from a raspberry pi banner"/>
+</header>
+
+    
+<nav>
+    <!--hamburger menu-->
+    <div onclick="myMenu(this)">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    
+    <script>
+    function myMenu(x) {
+		//changes between 3 lines and X shape
+        x.classList.toggle("change");
+		
+		//shows navigation, didn't hide again as needed
+		//document.getElementById("show").style.display = "block";
+		
+		//switches between showing navigation and not when hamburger menu clicked
+		//edited from W3Schools as their version started by displying the content whereas mine starts with it hidden
+    	var x = document.getElementById("show");
+		if (x.style.display === "block") {
+        	x.style.display = "none";
+    	} else {
+        	x.style.display = "block";
+    }
+    }
+    </script>
+    
+    <!--Navigation bar made in a list-->
+    <ul id="show">
+        <li class="home"> <a href="Index.html">HOME</a></li>
+        <li class="equipment"> <a href="Equipment.html">EQUIPMENT</a></li>
+        <li class="guide"> <a href="Guide.html">GUIDE</a></li>
+        <li class="optional"> <a href="Optional.html">OPTIONAL</a></li>
+        <li class="contact"> <a href="Contact.html">CONTACT</a></li>
+    </ul>
+    
+</nav>    
+
+<section>   
+ 
+<h1 class="EquipmentTitle">EQUIPMENT</h1> 
+       
+<img class="equipment_image" src="images/Equipment.png" alt="Equiptment needed"/>
+<img class="equipment_image" src="images/connected_pi.png" alt="Raspberry Pi with wires connected"/>
+
+<div class="equipmentInstructions">
+<h3 class="EquipmentTitle">INSTRUCTIONS</h3>
+<p>1. Plug the HDMI cable from the monitor to the Raspberry Pi.</p>
+<p>2. Connect the USB keyboard. Then the USB controller.</p>
+<p>3. Insert the micro SD card into the Raspberry Pi (after installing RetroPie using the guide page for help).</p>
+<p>4. Use the micro USB wire for power, ideally from a 12W power supply. E.g. From an iPad plug.</p>
+</div>
+
+<table>
+  <tr class="tableHeading">
+    <th class="table1">HARDWARE</th>
+    <th class="table2">SOFTWARE</th> 
+  </tr>
+  <tr>
+    <td>Raspberry Pi 3</td>
+    <td>RetroPie</td> 
+  </tr>
+  <tr>
+    <td>USB controller</td>
+    <td>Win32DiskImager</td> 
+  </tr>
+  <tr>
+    <td>Micro USB power supply</td>
+    <td>Etcher</td> 
+  </tr>
+  <tr>
+    <td>At least 8GB SD card</td>
+    <td></td> 
+  </tr>
+  <tr>
+    <td>Monitor with HDMI cable</td>
+    <td></td> 
+  </tr>
+  <tr>
+    <td>Computer for set up</td>
+    <td></td> 
+  </tr>
+  <tr>
+    <td>USB keyboard for set up</td>
+    <td></td> 
+  </tr>
+  <tr>
+    <td>USB memory stick</td>
+    <td></td> 
+  </tr>
+</table>
+
+
+<h3 class="EquipmentTitle">RASPBERRY PI CASE</h3>
+
+<div class="caseDiv"> <!--space between each section of page using divs-->
+<img class="equipment_image" src="images/assembled_pi_case.png" alt="Assembled Raspberry Pi case"/>
+<img class="equipment_image" src="images/pi_case.png" alt="Raspberry Pi case"/>
+<p class="caseText">Before inserting the wires or SD card, put the Raspberry Pi into its case if you have one. Do this by carefully placing it into base, then clip on the top. After this, just clip on the sides. The case will protect the Raspberry Pi so it is advised to use one. 
+</p>
+</div>
+
+</section>      
+    
+<footer> 
+    <img class="sonic" src="graphics/sonic_footer.PNG" alt="sonic footer"/>
+    <p>Copyright &copy; Tilly Davies, Birmingham City University 2017</p>
+</footer>
+    
+    
+</div>
+</body>
