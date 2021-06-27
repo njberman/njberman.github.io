@@ -68,12 +68,11 @@ const fireVy = 1;
 
 //
 let BESTSCORE = 0;
-updateLocalStorageScore();
 
 function updateLocalStorageScore() {
     window.localStorage.BESTSCORE = BESTSCORE;
     BESTSCORE = parseInt(window.localStorage.BESTSCORE, 10);
-    console.log(BESTSCORE);
+    console.log(BESTSCORE, window.localStorage.BESTSCORE);
 }
 
 // assets from: https://github.com/sourabhv/FlapPyBird/tree/master/assets
@@ -127,6 +126,7 @@ function preload() {
 
 
 function setup() {
+    updateLocalStorageScore();
     // Game basic setup.
     // Mounting canvas onto div for convenient styling.
     cvsWrapper = document.getElementById("canvasWrapper");
