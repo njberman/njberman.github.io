@@ -73,6 +73,7 @@ updateLocalStorageScore();
 function updateLocalStorageScore() {
     window.localStorage.BESTSCORE = BESTSCORE;
     BESTSCORE = parseInt(window.localStorage.BESTSCORE, 10);
+    console.log(BESTSCORE);
 }
 
 // assets from: https://github.com/sourabhv/FlapPyBird/tree/master/assets
