@@ -68,7 +68,13 @@ const fireVy = 1;
 
 //
 let BESTSCORE = 0;
+updateLocalStorageScore();
 
+function updateLocalStorageScore() {
+    if (!localStorage.BESTSCORE) localStorage.BESTSCORE = 0;
+    localStorage.BESTSCORE = BESTSCORE;
+    BESTSCORE = localStorage.BESTSCORE;
+}
 
 // assets from: https://github.com/sourabhv/FlapPyBird/tree/master/assets
 
@@ -401,7 +407,7 @@ function draw() {
         if (!gotScore[0]) {
             if (checkBirdPoint > checkPipePoints[0]) {
                 SCORE++;
-                if (SCORE > BESTSCORE) { BESTSCORE = SCORE; };
+                if (SCORE > BESTSCORE) { BESTSCORE = SCORE; updateLocalStorageScore(); };
                 gotScore[0] = true;
                 if (!MUTE) { scoreSound.play(); }
             }
@@ -410,7 +416,7 @@ function draw() {
         if (!gotScore[1]) {
             if (checkBirdPoint > checkPipePoints[1]) {
                 SCORE++;
-                if (SCORE > BESTSCORE) { BESTSCORE = SCORE; };
+                if (SCORE > BESTSCORE) { BESTSCORE = SCORE; updateLocalStorageScore(); };
                 gotScore[1] = true;
                 if (!MUTE) { scoreSound.play(); }
             }
