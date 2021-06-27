@@ -408,7 +408,8 @@ function draw() {
                     hitSound.play();
                     dieSound.play();
                 }
-            }
+								scoreTings('POST');
+							}
             /*----draw the bird----*/
 
             push();
