@@ -70,7 +70,8 @@ const fireVy = 1;
 let BESTSCORE = 0;
 
 function updateLocalStorageScore() {
-    window.localStorage.BESTSCORE = BESTSCORE;
+    if (!window.localStorage.BESTSCORE) window.localStorage.BESTSCORE = 0;
+    if (BESTSCORE != 0) window.localStorage.BESTSCORE = BESTSCORE;
     BESTSCORE = parseInt(window.localStorage.BESTSCORE, 10);
 //     console.log(BESTSCORE, window.localStorage.BESTSCORE);
 }
