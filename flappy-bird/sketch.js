@@ -178,7 +178,7 @@ function setup() {
     /*################( hyper variable )##############*/
     MODE = "start";
     state = "flying";
-    SCORE = 0;
+    SCORE = 45;
     gotScore = [false, false]
 
     /*################# ( environment setup ) ################*/
