@@ -154,10 +154,11 @@ function preload() {
 
     /*#################### ( audio ) ##################*/
     wingSound = loadSound("assets/audio/wing.ogg");
-    scoreSound = loadSound("assets/audio/point.ogg");
-//     hitSound = loadSound("assets/audio/hit.ogg");
+//     scoreSound = loadSound("assets/audio/point.ogg");
+    scoreSound = loadSound("/point.mp3");
+    hitSound = loadSound("assets/audio/hit.ogg");
 //     dieSound = loadSound("assets/audio/die.ogg");
-    hitSound = loadSound("/hit.mp3");
+//     hitSound = loadSound("/hit.mp3");
     dieSound = loadSound("/die.mp3");
     swooshSound = loadSound("assets/audio/swoosh.ogg");
 }
