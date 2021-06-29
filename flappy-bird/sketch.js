@@ -76,8 +76,10 @@ function scoreTings(type) {
 		fetch(url)
 			.then((res) => res.json())
 			.then((json) => {
-				document.getElementById('score-name').innerText = json.name;
-				document.getElementById('score-score').innerText = json.score;
+				for (let i = 0; i < 3; i++) {
+					document.getElementById('score-name-' + String(i+ 1)).innerText = json[i].name;
+					document.getElementById('score-score-' + String(i+ 1)).innerText = json[i].score;
+				}
 			})
 			.catch(console.error);
 			return;
