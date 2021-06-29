@@ -84,7 +84,7 @@ function scoreTings(type) {
 			.catch(console.error);
 			return;
 		} else if (type == 'POST') {
-			if (SCORE > parseInt(document.getElementById('score-score').innerText, 10)) {
+			if (SCORE > parseInt(document.getElementById('score-score-3').innerText, 10)) {
 				const receivedName = prompt('Congratulations! You just got the new high score!\nPlease enter your first name and then the first letter of your last name so you can go on the leaderboard.');
 				console.log({
 					name: receivedName,
