@@ -89,7 +89,7 @@ function scoreTings(type) {
 			return;
 		} else if (type == 'POST') {
 			if (SCORE > parseInt(document.getElementById('score-score-3').innerText, 10)) {
-				const receivedName = limit(prompt('Congratulations! You just got the new high score!\nPlease enter your first name and then the first letter of your last name so you can go on the leaderboard.\nPlease don\'t use innapropriate names or names longer than 30 chars.\nPlease not if you do, the rest will be cut off.\nThank you.'));
+				const receivedName = limit(prompt('Congratulations! You just got the new high score!\nPlease enter your first name and then the first letter of your last name so you can go on the leaderboard.\nPlease don\'t use innapropriate names or names longer than 30 chars.\nPlease not if you do, the rest will be cut off.\nThank you.'), 30);
 				console.log({
 					name: receivedName,
 					score: SCORE,
