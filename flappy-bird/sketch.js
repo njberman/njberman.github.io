@@ -69,6 +69,10 @@ const fireVy = 1;
 //
 let BESTSCORE = 0;
 
+function limit (string = '', limit = 0) {  
+  return string.substring(0, limit)
+}
+
 function scoreTings(type) {
 	const url = 'https://flappy-bird-highscore.herokuapp.com';
 	// const url = 'http://localhost:3000';
@@ -85,7 +89,7 @@ function scoreTings(type) {
 			return;
 		} else if (type == 'POST') {
 			if (SCORE > parseInt(document.getElementById('score-score-3').innerText, 10)) {
-				const receivedName = prompt('Congratulations! You just got the new high score!\nPlease enter your first name and then the first letter of your last name so you can go on the leaderboard.\nPlease don\'t use innapropriate names. Thank you.');
+				const receivedName = limit(prompt('Congratulations! You just got the new high score!\nPlease enter your first name and then the first letter of your last name so you can go on the leaderboard.\nPlease don\'t use innapropriate names or names longer than 30 chars.\nPlease not if you do, the rest will be cut off.\nThank you.'));
 				console.log({
 					name: receivedName,
 					score: SCORE,
