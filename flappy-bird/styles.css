@@ -26,8 +26,11 @@ body {
 	/* background: rgb(63, 63, 63); */
 }
 
-#canvasWrapper {
+#main:first-child {
 	margin-left: 10vw;
+}
+
+#canvasWrapper {
 	width: 432px;
 	height: 768px;
 }
