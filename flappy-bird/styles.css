@@ -14,10 +14,10 @@ body {
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
+	background: #00656e;
 }
 
 #main {
-	background: #00656e;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
