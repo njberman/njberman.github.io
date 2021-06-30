@@ -35,15 +35,16 @@ body {
 .column {
   display: flex;
   flex-direction: column;
+	
+	
+	text-align: center;
+	color: white;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 2rem;
 }
 
 #score {
 	flex-basis: 100%;
 	flex: 1;
 	width: 100%;
-	
-	text-align: center;
-	color: white;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: 2rem;
 }
